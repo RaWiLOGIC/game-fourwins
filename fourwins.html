@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="language" content="de">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Game FourWins</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.min.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="css/fw.min.css" media="screen" />
+	<script type="text/javascript" src="js/fw.js"></script>
+  <script type="text/javascript" language="JavaScript">
+    window.onload = function() {
+			fw = new FourWins({});
+    }
+		function dropChip(dropIndex) {
+			fw.dropChip(dropIndex);
+		}
+		function reset() {
+			var button = document.getElementById("br");
+			button.className.replace(/\bfocus\b/g, "");
+			fw.initGame();
+		}
+		function toggleInfo() {
+      var elem = document.getElementById('infocontent');
+      elemdisplay = elem.style.display;
+      if (elemdisplay == '' || elemdisplay == 'none') {
+        elem.style.display = 'block';
+      } else {
+        elem.style.display = 'none';
+      }
+		}
+  </script>
+</head>
+<body>
+	<header>
+		<div class="logobox"><a href="http://www.rawilogic.de" target="_blank"><img class="logo" src="svg/rawilogic.svg" alt="Logo RaWiLogic"></a></div>
+	  <div id="menubox"><h5>TypeScript project game FourWins</h5></div>
+	</header>
+  <div class="content">
+		<div class="gamediv">
+			<div class="centereddiv">
+				<div id="dropbuttons">
+					<button class="arrow-q-down" onclick="dropChip(1);"></button>
+					<button class="arrow-q-down" onclick="dropChip(2);"></button>
+					<button class="arrow-q-down" onclick="dropChip(3);"></button>
+					<button class="arrow-q-down" onclick="dropChip(4);"></button>
+					<button class="arrow-q-down" onclick="dropChip(5);"></button>
+					<button class="arrow-q-down" onclick="dropChip(6);"></button>
+					<button class="arrow-q-down" onclick="dropChip(7);"></button>
+				</div>
+			</div>
+			<div id="canvasdiv">
+				<canvas></canvas>
+				<div id="infocontent">
+					<div class="closebutton" onclick="toggleInfo();"></div>
+					<h1><br>FourWins</h1>
+					<h5>Rules of the game</h5>
+					<p>The aim of the game is to create a row of four chips.</p>
+					<p>The row can be formed horizontally, vertically or diagonally.</p>
+					<p>The playing field is vertical. For this reason, the chips thrown in from above always fall on the lower free field or on the free field above an already thrown chip.</p>
+					<h5>Info</h5>
+					<p>The algorithm only calculates the next move. I think I've implemented a relatively good logic, but unfortunately it's still beatable.<br><br><br>Just play and try!</p>
+				</div>
+			</div>
+			<div id="meldungdiv"></div>
+			<div class="buttons">
+				<input id="bi" class="but" type="button" value="Rules" onclick="toggleInfo();">
+				<input id="br" class="but" type="button" value="New game" onclick="reset();">
+			</div>
+    </div>
+  </div>
+</body>
+</html>

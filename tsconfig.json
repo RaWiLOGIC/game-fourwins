@@ -1,0 +1,14 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": false,
+    "target": "ES6",
+    "module": "commonjs",
+    "outDir": "./js"
+  },
+  "include": ["./_ts/*"],
+  "exclude": ["./.vscode", "./_scss", "./css", "./js", "./svg"]
+}

@@ -1,0 +1,227 @@
+/* Styles Game FourWins */
+@import '../_import/vars';
+* { box-sizing: border-box; }
+.content { display: flex; align-items: center; }
+canvas { opacity: 0.8; }
+button { margin: 0; padding: 0; outline: none; }
+.gamediv {
+	width: 882px;
+	margin: 0 auto;
+	position: relative;
+	display: inline-block;
+}
+#canvasdiv {
+	width: 880px;
+	height: 880px;
+}
+#dropbuttons {
+	width: 100%;
+	height: 25px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	cursor: default;
+}
+#meldungdiv {
+	width: 100%;
+	height: 20px;
+	margin: 0.75rem auto 0.75rem auto;
+	padding: 0;
+	text-align: center;
+	color: $color-plaintxt;
+}
+.centereddiv {
+	width: 100%;
+	height: 25px;
+	margin: 0 0 0.5rem 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+.buttons {
+	width: 100%;
+	height: 30px;
+	margin: 5px auto 20px auto;
+	display: flex;
+	justify-content: center;
+} 
+.but {
+	width: 10rem;
+	height: 1.75rem;
+	font-family: $font-family;
+	font-weight: normal;
+	font-size: 0.75rem;
+	line-height: 0;
+	color: $color-link;
+	text-decoration: none;
+	letter-spacing: 0.05rem;
+	padding: 0;
+	margin: 0 auto;
+	cursor: pointer;
+	border: 1px solid $color-border;
+	border-radius: 5px;
+	background-image: linear-gradient(to bottom, $color-header-from, $color-header-to);
+	background-repeat: repeat-x;
+	transition: all .25s ease;
+	outline: none;
+	&:hover { color: $color-hover; }
+}
+.arrow-q-down {
+	width: 13.73%;
+	height: 25px;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	outline: none;
+	border: 1px solid $color-border;
+	border-radius: 5px;
+	background-image: linear-gradient(to bottom, $color-header-from, $color-header-to);
+	background-repeat: repeat-x;
+	display: inline-block;
+	&:before {
+		width: 14px;
+		height: 14px;
+		top: -3px;
+		left: 0px;
+		content: '';
+		position: relative;
+		display: inline-block;
+		border-top: 4px solid $color-active;
+		border-left: 4px solid $color-active;
+		transform: rotate(-135deg);
+	}
+	&:hover:before {
+		border-top: 4px solid $color-hover;
+		border-left: 4px solid $color-hover;
+	}	
+}
+#infocontent {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0px 0px 12px 0px;
+	margin: 0;
+	background: $color-bg;
+	border: 1px solid $color-border;
+	z-index: 3;
+	cursor: default;
+	display: none;
+	h1 {
+		font-size: 1.4rem;
+		text-align: left;
+		margin: 10px 0px 0px 18px;
+		letter-spacing: 0.05rem;
+	}
+	h5 {
+		font-size: 1.2rem;
+		text-align: left;
+		margin: 14px 0px 4px 18px;
+		letter-spacing: 0.05rem;
+	}
+	p {
+		font-size: 1rem;
+		line-height: 1.25rem;
+		text-align: left;
+		margin: 10px 0px 0px 18px;
+		width: 92%;
+		letter-spacing: 0.05rem;
+	}
+}
+.closebutton {
+	width: 20px;
+	height: 20px;
+	position: relative;
+	float: right;
+	top: 8px;
+	right: 10px;
+	background-image: url("../svg/close.svg");
+	background-repeat: no-repeat;
+	background-size: 20px;
+	background-position: 0px 0px;
+	opacity: 0.5;
+	cursor: pointer;
+	transition: all .25s ease;
+	&:hover {
+		opacity: 1;
+	}	
+}
+// Media Querys
+@media (max-width: 1920px) {
+	.gamediv {
+		width: 442px;
+	}
+  #canvasdiv {
+    width: 440px;
+    height: 440px;
+	}
+	.arrow-q-down {
+		width: 13.15%;
+	}
+}
+@media (max-width: 414px) {
+	.gamediv {
+		width: 382px;
+	}
+  #canvasdiv {
+    width: 380px;
+		height: 380px;
+	}
+	.arrow-q-down {
+		width: 13%;
+	}
+	#infocontent {
+		position: fixed;
+		top: 6em;
+		left: 0px;
+		bottom: 0;
+		overflow-y: auto;
+	}	
+	.closebutton {
+		position: fixed;
+		top: 6.75em;
+		right: 0.75em;
+	}
+}
+@media (max-width: 380px) {
+	.gamediv {
+		width: 342px;
+	}
+  #canvasdiv {
+    width: 340px;
+    height: 340px;
+	}
+	.arrow-q-down {
+		width: 12.86%;
+	}
+}
+@media (max-width: 360px) {
+	.gamediv {
+		width: 332px;
+	}
+  #canvasdiv {
+    width: 330px;
+    height: 330px;
+	}
+	.arrow-q-down {
+		width: 12.8%;
+	}
+}
+@media (max-width: 320px) {
+	.gamediv {
+		width: 282px;
+	}
+  #canvasdiv {
+    width: 280px;
+    height: 280px;
+	}
+	.arrow-q-down {
+		width: 12.55%;
+	}
+	.but {
+		width: 8rem;
+	}
+}
