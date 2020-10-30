@@ -13,7 +13,7 @@
     }
   ],
   "liveSassCompile.settings.includeItems": [
-    "/_scss/**"
+    "/_scss"
   ],
   "liveSassCompile.settings.excludeList": [
     "/.vscode",
