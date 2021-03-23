@@ -1,4 +1,4 @@
-# Game FourWins - a TypeScript project / Spiel FourWins - ein TypeScript-Pprojekt
+# Game FourWins - a TypeScript project / Spiel FourWins - ein TypeScript-Projekt
 
 The game was created in 2012, when I wrote it in ActionScript (Flash) and published it on my website.
 Now that Flash is no longer being developed and I had invested some time back then, I decided to
